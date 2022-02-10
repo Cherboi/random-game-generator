@@ -23,6 +23,6 @@ var listOfGames = function() {
 // display 8 games randomly to choose from. 
 // ?genres= blah blah bla (userInput)
 // ?tags= single or multiplayer (userInput)
-}
+};
 
 //listOfGames();
