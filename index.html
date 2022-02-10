@@ -11,38 +11,44 @@
 </head>
 
 <body>
-    <header>
-        <div>
-            <h1>
-                Welcome to The Random Game Generator
-            </h1>
-            <p>
-                With this app, you can randomly choose a game from our database and bring you to where you need to play
-                it.
-            </p>
-        </div>
-    </header>
-
-    <section>
-        <div id="mainbox" class="mainbox">
-            <div id="box" class="box">
-                <div class="box1">
-                    <span class="span1"><b></b></span>
-                    <span class="span2"><b></b></span>
-                    <span class="span3"><b></b></span>
-                    <span class="span4"><b></b></span>
-                </div>
-                <div class="box2">
-                    <span class="span1"><b></b></span>
-                    <span class="span2"><b></b></span>
-                    <span class="span3"><b></b></span>
-                    <span class="span4"><b></b></span>
-                </div>
+    <div class="container">
+        <header>
+            <div class="row">
+                <h1>
+                    Welcome to The Random Game Generator
+                </h1>
             </div>
-            <button class="spin" onclick="rotateFunction()">SPIN</button>
-        </div>
-    </section>
-
+        </header>
+        <section>
+            <div class="row">
+                <h5 class="center-align">
+                    With this app, you can randomly choose a game from our database and bring you to where you need to
+                    play
+                    it.
+                </h5>
+                <div class="divider"></div>
+                <div class="center-align"></div>
+                        <div id="mainbox" class="mainbox">
+                            <div id="box" class="box">
+                                <div class="box1">
+                                    <span class="span1"><b></b></span>
+                                    <span class="span2"><b></b></span>
+                                    <span class="span3"><b></b></span>
+                                    <span class="span4"><b></b></span>
+                                </div>
+                                <div class="box2">
+                                    <span class="span1"><b></b></span>
+                                    <span class="span2"><b></b></span>
+                                    <span class="span3"><b></b></span>
+                                    <span class="span4"><b></b></span>
+                                </div>
+                            </div>
+                            <button class="spin" onclick="rotateFunction()">SPIN</button>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </div>
 </body>
 <script src="./Develop/JS/logic.js"></script>
 
