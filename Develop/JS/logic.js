@@ -21,7 +21,7 @@ setTimeout(function () {
 //spin wheel
 // when wheel lands on game. give info about game
 // if player wants to spin again repeat process
-=======
+
 // call api to get games
 var listOfGames = function() {
     var rawgApiKey = "ad7969f5577647f8b8809a70ca6cecd4";
