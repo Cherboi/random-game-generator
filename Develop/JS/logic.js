@@ -1,3 +1,11 @@
+
+
+var btnChoiceEl = document.querySelector(".btn-container");
+var btnSingleEl = document.querySelector(".btn-sngl");
+var btnMultiEl = document.querySelector(".btn-multi");
+
+           
+
 function rotateFunction() {
     var min = 1024;
     var max = 9999;
@@ -13,11 +21,37 @@ setTimeout(function () {
 
 
 // call api to get games
-var listOfGames = function() {
-    var rawgApiKey = "ad7969f5577647f8b8809a70ca6cecd4";
-    var rawgUrl = `https://api.rawg.io/api/games?key=${rawgApiKey}`;
+var getListOfGames = function(event) {
 
-    //fetch(rawgUrl);
+    const rawgApiKey = "ad7969f5577647f8b8809a70ca6cecd4";
+
+   // request singleplayer games
+    if(event.target.matches(".btn-sngl")) {
+
+        var rawgUrl = `https://api.rawg.io/api/games?key=${rawgApiKey}&tags=singleplayer`;
+
+    //URL Games request
+    fetch(rawgUrl).then(function(response) {
+       response.json().then(function(data) {
+           console.log(data);
+       });
+    });
+    }
+    // request multiplayer games 
+   else if(event.target.matches(".btn-multi")) {
+     
+    var rawgUrl = `https://api.rawg.io/api/games?key=${rawgApiKey}&tags=multiplayer`;
+
+    // URL Games request
+    fetch(rawgUrl).then(function(response) {
+        response.json().then(function(data) {
+            console.log(data);
+        });
+     });
+    };
+
+    
+    
 
 
 // display 8 games randomly to choose from. 
@@ -26,3 +60,6 @@ var listOfGames = function() {
 };
 
 //listOfGames();
+
+// event listener for single & multiplayer buttons
+btnChoiceEl.addEventListener("click", getListOfGames);
