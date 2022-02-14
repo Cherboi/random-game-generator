@@ -20,6 +20,16 @@ setTimeout(function () {
 }, 5000);
 
 
+// <<<<<<< feature/modal
+// ask user if they want to play a single player game or multiplayer game
+// list single player games if user chooses single player
+// list multiplayer game if user chooses multiplayer
+// randomly generate 8 games from use choice
+// add choices to wheel
+//spin wheel
+// when wheel lands on game. give info about game
+// if player wants to spin again repeat process
+
 // call api to get games
 var getListOfGames = function(event) {
 
@@ -60,6 +70,10 @@ var getListOfGames = function(event) {
 };
 
 //listOfGames();
+//<<<<<<< feature/games-api
 
 // event listener for single & multiplayer buttons
 btnChoiceEl.addEventListener("click", getListOfGames);
+=======
+// >>>>>>> main
+//>>>>>>> main
