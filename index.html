@@ -11,14 +11,16 @@
 </head>
 
 <body>
+
+
+
+
     <div class="container">
         <header>
             <div class="row">
-                <div class=" center-align">
-                    <h1>
-                        Welcome to The Random Game Generator
-                    </h1>
-                </div>
+                <h1>
+                    Welcome to The Random Game Generator
+                </h1>
             </div>
         </header>
         <section>
@@ -28,30 +30,25 @@
                     play
                     it.
                 </h5>
-                <div class="divider"></div>
-                <div class="center-align"></div>
-                <div id="mainbox" class="mainbox">
-                    <div id="box" class="box">
-                        <div class="box1">
-                            <span class="span1"><b></b></span>
-                            <span class="span2"><b></b></span>
-                            <span class="span3"><b></b></span>
-                            <span class="span4"><b></b></span>
-                        </div>
-                        <div class="box2">
-                            <span class="span1"><b></b></span>
-                            <span class="span2"><b></b></span>
-                            <span class="span3"><b></b></span>
-                            <span class="span4"><b></b></span>
-                        </div>
-                    </div>
-                    <button class="spin" onclick="rotateFunction()">SPIN</button>
+                <div class=btn-container>
+                    <button class="btn-sngl">Single Player</button>
+                    <button class="btn-multi">Multiplayer</button>
                 </div>
+                <div class="divider"></div>
+
+                <ul class="game-list"></ul>
+
+
             </div>
+
     </div>
     </section>
-    </div>
+
+    <script src="./Develop/JS/logic.js"></script>
 </body>
-<script src="./Develop/JS/logic.js"></script>
+
+
+
+
 
 </html>
