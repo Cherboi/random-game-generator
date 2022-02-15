@@ -74,6 +74,6 @@ var getListOfGames = function(event) {
 
 // event listener for single & multiplayer buttons
 btnChoiceEl.addEventListener("click", getListOfGames);
-=======
+//=======
 // >>>>>>> main
 //>>>>>>> main
