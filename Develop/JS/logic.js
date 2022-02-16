@@ -22,68 +22,70 @@ var getListOfGames = function (event) {
             response.json().then(function (data) {
                 console.log(data);
 
-                  // loop through data and return 8 titles from object 
-                  for (var i = 0; i < 8; i++) {
+                // loop through data and return 8 titles from object 
+                for (var i = 0; i < 8; i++) {
                     console.log(data.results[i].name);
 
-                //  creates div container for cards
+                    //  creates div container for cards
                     var cardContainer = document.createElement("div");
                     cardContainer.className = "row";
 
-                // creates div element for cards
+                    // creates div element for cards
                     var colContainer = document.createElement("div");
-                    colContainer.className = "col s12 m7";
+                    colContainer.className = "center-align";
 
-                //  appends conatiner to main for cards
+                    //  appends conatiner to main for cards
                     cardContainer.appendChild(colContainer);
 
-                // creates div element
+                    // creates div element
                     var card = document.createElement("div");
-                    card.className = "card";
+                    card.className = "card large";
 
 
-                // append to container for card.
+                    // append to container for card.
                     colContainer.appendChild(card);
 
-                // creates conatiner element for image
+                    // creates conatiner element for image
                     var cardImageEl = document.createElement("div");
-                    cardImageEl.className="card-image";
+                    cardImageEl.className = "card-image";
 
-                //  creates image
+                    //  creates image
                     var cardImg = document.createElement("img");
                     cardImg.setAttribute("src", data.results[i].background_image);
                     cardImg.setAttribute("sameSite", "None");
 
-                // creates card title
+                    // creates card title
                     var cardTitle = document.createElement("span");
-                    cardTitle.className="card-title yellow-text";
+                    cardTitle.className = "card-title blue-grey-text text-darken-2";
                     cardTitle.textContent = data.results[i].name;
 
-                // creates container for game descriptions
+                    // creates container for game descriptions
                     var cardContentEl = document.createElement("div");
                     cardContentEl.className = "card-content";
 
-                // release info
+                    // release info
                     var release = document.createElement("p");
                     release.className = "description";
                     release.textContent = "Released: " + data.results[i].released;
 
-                // esrb info(rating)
+                    // esrb info(rating)
                     var esrb = document.createElement("p");
                     esrb.className = "description";
                     esrb.textContent = "Rating: " + data.results[i].esrb_rating.name;
 
-                //  genre info
+                    //  genre info
                     var genre = document.createElement("p");
                     genre.className = "description";
-                    genre.textContent = "Genre: " + data.results[i].genres[0].name + "/"+ data.results[i].genres[1].name;
+                    genre.textContent = "Genre: " + data.results[i].genres[0].name + "/" + data.results[i].genres[1].name;
 
-                // append information to content div
+
+
+                    // append information to content div
                     cardContentEl.appendChild(release);
                     cardContentEl.appendChild(esrb);
                     cardContentEl.appendChild(genre);
 
-                    
+
 
                     cardImageEl.appendChild(cardImg);
                     cardImageEl.appendChild(cardTitle);
@@ -93,7 +95,7 @@ var getListOfGames = function (event) {
 
                     mainContainer.appendChild(cardContainer);
 
-                    
+
 
                     // var gamebtnEl = document.createElement("div");
                     // var games = document.createElement("button");
@@ -123,64 +125,71 @@ var getListOfGames = function (event) {
                 for (var i = 0; i < 8; i++) {
                     console.log(data.results[i].name);
 
-                //  creates div container for cards
+                    //  creates div container for cards
                     var cardContainer = document.createElement("div");
                     cardContainer.className = "row";
 
-                // creates div element for cards
+                    // creates div element for cards
                     var colContainer = document.createElement("div");
-                    colContainer.className = "col s12 m7";
+                    colContainer.className = "center-align";
 
-                //  appends conatiner to main for cards
+                    //  appends conatiner to main for cards
                     cardContainer.appendChild(colContainer);
 
-                // creates div element
+                    // creates div element
                     var card = document.createElement("div");
-                    card.className = "card";
+                    card.className = "card large";
 
-
-                // append to container for card.
+                    // append to container for card.
                     colContainer.appendChild(card);
 
-                // creates conatiner element for image
-                    var cardImageEl = document.createElement("div");
-                    cardImageEl.className="card-image";
 
-                //  creates image
+                    // creates conatiner element for image
+                    var cardImageEl = document.createElement("div");
+                    cardImageEl.className = "card-image card-tab";
+
+                    //  creates image
                     var cardImg = document.createElement("img");
                     cardImg.setAttribute("src", data.results[i].background_image);
                     cardImg.setAttribute("sameSite", "none");
 
-                // creates card title
+                    // creates card title
                     var cardTitle = document.createElement("span");
-                    cardTitle.className="card-title yellow-text";
+                    cardTitle.className = "card-title blue-grey-text text-darken-2";
                     cardTitle.textContent = data.results[i].name;
 
-                // creates container for game descriptions
+                    // creates container for game descriptions
                     var cardContentEl = document.createElement("div");
                     cardContentEl.className = "card-content";
 
-                // release info
+                    // release info
                     var release = document.createElement("p");
                     release.className = "description";
                     release.textContent = "Released: " + data.results[i].released;
 
-                // esrb info(rating)
+                    // esrb info(rating)
                     var esrb = document.createElement("p");
                     esrb.className = "description";
                     esrb.textContent = "Rating: " + data.results[i].esrb_rating.name;
 
-                //  genre info
+                    //  genre info
                     var genre = document.createElement("p");
                     genre.className = "description";
-                    genre.textContent = "Genre: " + data.results[i].genres[0].name + "/"+ data.results[i].genres[1].name;
+                    genre.textContent = "Genre: " + data.results[i].genres[0].name + "/" + data.results[i].genres[1].name;
 
-                // append information to content div
+                    // Store info
+                    var stores = document.createElement("p");
+                    stores.className = "locations";
+                    stores.textContent = "Stores: " + data.results[i].stores[0].name;
+
+
+                    // append information to content div
                     cardContentEl.appendChild(release);
                     cardContentEl.appendChild(esrb);
                     cardContentEl.appendChild(genre);
+                    cardContentEl.appendChild(stores);
 
-                    
+
 
                     cardImageEl.appendChild(cardImg);
                     cardImageEl.appendChild(cardTitle);
