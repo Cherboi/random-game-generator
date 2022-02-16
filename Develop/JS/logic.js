@@ -80,6 +80,7 @@ var getListOfGames = function (event) {
 
 
 
+
                     // append information to content div
                     cardContentEl.appendChild(release);
                     cardContentEl.appendChild(esrb);
@@ -212,7 +213,6 @@ var getListOfGames = function (event) {
         });
     };
 };
-
 
 // event listener for single & multiplayer buttons
 btnChoiceEl.addEventListener("click", getListOfGames);
