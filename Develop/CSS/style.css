@@ -117,3 +117,7 @@ span b{
     right: -40px;
   }
 }
+
+.button {
+  font-size: 30px;
+}
