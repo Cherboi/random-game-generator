@@ -4,3 +4,12 @@
   font-weight: bold;
 }
 
+.favorite-button {
+  margin-top: 10px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  border:1px solid darkred;
+  padding: 5px 20px;
+  box-shadow: 5px 5px 8px #888888;
+}

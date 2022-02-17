@@ -78,12 +78,21 @@ var getListOfGames = function (event) {
                     genre.className = "description";
                     genre.textContent = "Genre: " + data.results[i].genres[0].name + "/"+ data.results[i].genres[1].name;
 
+                    // favorites button generate
+                    var favorite = document.createElement("div");
+                    favorite.className = "favorites";
+
+                    var favBtn = document.createElement("button");
+                    favBtn.className = "favorite-button"
+                    favBtn.textContent = 'Favorite';
+
+                    favorite.appendChild(favBtn);
+
                 // append information to content div
                     cardContentEl.appendChild(release);
                     cardContentEl.appendChild(esrb);
                     cardContentEl.appendChild(genre);
-
-                    
+                    cardContentEl.appendChild(favorite);
 
                     cardImageEl.appendChild(cardImg);
                     cardImageEl.appendChild(cardTitle);
@@ -175,13 +184,24 @@ var getListOfGames = function (event) {
                     genre.className = "description";
                     genre.textContent = "Genre: " + data.results[i].genres[0].name + "/"+ data.results[i].genres[1].name;
 
+                    // favorites button generate
+                    var favorite = document.createElement("div");
+                    favorite.className = "favorites";
+
+                    var favBtn = document.createElement("button");
+                    favBtn.className = "favorite-button"
+                    favBtn.textContent = 'Favorite';
+
+                    favorite.appendChild(favBtn);
+                    
+
                 // append information to content div
                     cardContentEl.appendChild(release);
                     cardContentEl.appendChild(esrb);
                     cardContentEl.appendChild(genre);
+                    cardContentEl.appendChild(favorite);
 
                     
-
                     cardImageEl.appendChild(cardImg);
                     cardImageEl.appendChild(cardTitle);
 
