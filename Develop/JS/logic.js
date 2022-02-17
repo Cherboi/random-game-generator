@@ -80,11 +80,28 @@ var getListOfGames = function (event) {
 
 
 
+                    // favorites button generate
+                    var favorite = document.createElement("div");
+                    favorite.className = "favorites";
+
+                    var favBtn = document.createElement("button");
+                    favBtn.className = "favorite-button"
+                    favBtn.textContent = 'Favorite';
+
+                    favorite.appendChild(favBtn);
+
+                // append information to content div
+                    cardContentEl.appendChild(release);
+                    cardContentEl.appendChild(esrb);
+                    cardContentEl.appendChild(genre);
+                    cardContentEl.appendChild(favorite);
+
 
                     // append information to content div
                     cardContentEl.appendChild(release);
                     cardContentEl.appendChild(esrb);
                     cardContentEl.appendChild(genre);
+
 
 
 
@@ -182,6 +199,25 @@ var getListOfGames = function (event) {
                     var stores = document.createElement("p");
                     stores.className = "locations";
                     stores.textContent = "Stores: " + data.results[i].stores[0].name;
+
+
+                    // favorites button generate
+                    var favorite = document.createElement("div");
+                    favorite.className = "favorites";
+
+                    var favBtn = document.createElement("button");
+                    favBtn.className = "favorite-button"
+                    favBtn.textContent = 'Favorite';
+
+                    favorite.appendChild(favBtn);
+                    
+
+                // append information to content div
+                    cardContentEl.appendChild(release);
+                    cardContentEl.appendChild(esrb);
+                    cardContentEl.appendChild(genre);
+                    cardContentEl.appendChild(favorite);
+
 
 
                     // append information to content div

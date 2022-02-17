@@ -4,14 +4,4 @@
   font-weight: bold;
 }
 
-a#fav{
-  background: url('../images/addFavorit.png');
-  display: block;
-  width: 48px;
-  height: 48px;
- 
- }
- 
- a#fav.active{
-  background: url('../images/addFavorit_hover.png');
- }
+
