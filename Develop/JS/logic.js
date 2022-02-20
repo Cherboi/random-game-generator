@@ -237,8 +237,13 @@ var getListOfGames = function (event) {
     };
 };
 
-var btnCheck = function (event) {
-    console.log(document.querySelectorAll(".game-card"))
-}
 // event listener for single & multiplayer buttons
 btnChoiceEl.addEventListener("click", getListOfGames);
+
+//var getTrailers = function (event) {
+
+    //key = "AIzaSyA8LgKPxEYWyEcZYk8ZLWOnIi7a_VlDh3E";
+
+    //var btnCheck = function (event) {
+        console.log(document.querySelectorAll(".game-card"))
+//    }
