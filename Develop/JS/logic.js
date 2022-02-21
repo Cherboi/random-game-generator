@@ -150,7 +150,7 @@ var getListOfGames = function (event) {
 
                     // creates div element for cards
                     var colContainer = document.createElement("div");
-                    colContainer.className = "col s12 m7";
+                    colContainer.className = "col s12 m7 game-card";
 
                     //  appends conatiner to main for cards
                     cardContainer.appendChild(colContainer);
@@ -232,6 +232,13 @@ var getListOfGames = function (event) {
 
 
                 };
+                document.addEventListener("click", function (event) {
+                    console.log(event)
+                    if (event.target.classList[0] === "favorite-button") {
+                        localStorage.setItem("game", JSON.stringify(card))
+                        console.log("click")
+                    }
+                })
             });
         });
     };
