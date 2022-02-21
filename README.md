@@ -26,3 +26,4 @@ Giving you an option too look at your saved games.
 
 LINKS
 <link>(https://api.rawg.io/docs/)
+<link>(https://cherboi.github.io/random-game-generator/)
